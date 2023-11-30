@@ -20,10 +20,12 @@ public class Medico {
     }
 
     public static void main(String[] args) {
+       //Lanza la interfaz de usuario
         SwingUtilities.invokeLater(() -> createAndShowGUI());
     }
 
     private static void createAndShowGUI() {
+        //Se crea y configura la ventana de reservación
         frame = new JFrame("Reservación ");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -37,9 +39,10 @@ public class Medico {
         btnAceptar = new JButton("Aceptar");
         btnCancelar = new JButton("Cancelar");
 
+        //Se crea un panel de cuadricula para organizar los componentes
         JPanel panel = new JPanel(new GridLayout(7, 2));
 
-        // Se agregar componentes al panel
+        // Se agregar componentes y etiquetas al panel
         panel.add(new JLabel("Nombre del Médico:"));
         panel.add(NombreMedico);
 
@@ -60,14 +63,16 @@ public class Medico {
         panel.add(btnAceptar);
         panel.add(btnCancelar);
 
+        //Agrega el panel a la ventana principal
         frame.add(panel);
 
-        // Configurar  los botones
+        // Configurar acciones de los botones
         btnAceptar.addActionListener(e -> {
             guardarDatos();
             mostrarMensaje();
         });
 
+        //Configurar acciones de los botones
         btnCancelar.addActionListener(e -> frame.dispose());
 
         frame.setVisible(true);
