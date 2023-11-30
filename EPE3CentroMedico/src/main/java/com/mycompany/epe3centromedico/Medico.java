@@ -29,7 +29,7 @@ public class Medico {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 
-        // Crear componentes
+        // Se crean componentes
         NombrePaciente = new JTextField();
         NombreMedico = new JComboBox<>(new String[]{"Juan Meza", "Pedro Gomez", "Ricardo Araya"});
         Especialidad = new JComboBox<>(new String[]{"Medicina general", "Dermatología", "Oftalmología"});
@@ -39,7 +39,7 @@ public class Medico {
 
         JPanel panel = new JPanel(new GridLayout(7, 2));
 
-        // Agregar componentes al panel
+        // Se agregar componentes al panel
         panel.add(new JLabel("Nombre del Médico:"));
         panel.add(NombreMedico);
 
@@ -62,7 +62,7 @@ public class Medico {
 
         frame.add(panel);
 
-        // Configurar eventos de los botones
+        // Configurar  los botones
         btnAceptar.addActionListener(e -> {
             guardarDatos();
             mostrarMensaje();
@@ -72,7 +72,7 @@ public class Medico {
 
         frame.setVisible(true);
     }
-
+// Se guardan los datos
     private static void guardarDatos() {
         // Lógica para guardar datos en un arreglo y enviar a la interfaz de reservas
         String nombreMedico = (String) NombreMedico.getSelectedItem();
@@ -81,8 +81,7 @@ public class Medico {
         String horaSeleccionada = (String) Horas.getSelectedItem();
         double valorHora = 7000.0;
 
-        // Aquí deberías guardar estos datos en un arreglo o en una estructura de datos más adecuada
-        // y enviarlos a la interfaz de reservas
+   
     }
 
     private static void mostrarMensaje() {
