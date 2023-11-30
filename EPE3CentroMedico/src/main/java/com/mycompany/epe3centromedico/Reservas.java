@@ -39,7 +39,7 @@ public class Reservas extends JFrame {
          // Agregar el botón "Cerrar" al panel
         JButton btnCerrar = new JButton("Cerrar");
         btnCerrar.addActionListener(e -> {
-            // Cerrar la ventana actual y mostrar la interfaz inicial (ajusta según tus necesidades)
+            // Cerrar la ventana actual y mostrar la interfaz inicial
             dispose();  // Cierra la ventana actual
             JFrame inicial = new JFrame();
             inicial.setVisible(true);
